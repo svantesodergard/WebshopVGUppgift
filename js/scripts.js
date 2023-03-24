@@ -18,41 +18,63 @@ function loadJSON() {
         }
     };
 }
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
 
 function buildProduktCard(json) {
     document.getElementById("output").innerHTML += `
     <div class="col-md-3 mb-5">
     <div class="card h-100">
+
         <!-- Product image-->
-        <img class="card-img-top" src=${json.image} alt="..." />
+        <a target="_blank" href="${json.image}">
+        <img class="our-images card-img-top" src=${json.image} alt="..." />
+        </a>
+
         <!-- Product details-->
         <div class="card-body p-4">
             <div class="text-center">
                 <!-- Product name-->
                 <h5 class="fw-bolder">${json.title}</h5>
-                <!-- Product price-->
-                ${json.description}
-                <br>
-                $${json.price} 
+
             </div>
         </div>
         <!-- Product actions-->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+        <!--Product Info-->
+        <div class="overflow"> ${json.description}</div>
+            
+             <br>
+             <!-- Product price-->
+             <div class="text-center">$${json.price}</div> 
+             
             <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="orderConfirmation(${json.id})">Buy Product</a></div>
         </div>
     </div>
 </div>
 `;
-    }
+}
 
 
 
 
 // Jump to confirmation page
-  function  orderConfirmation(id){
+function orderConfirmation(id) {
 
-        window.open('confirmation-page.html', '_blank')
+    window.open('confirmation-page.html', '_blank')
 
 
-    }
+}
