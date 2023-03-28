@@ -76,6 +76,6 @@ function buildProduktCard(json) {
 function orderConfirmation(id) {
 
     window.open('confirmation-page.html', '_blank')
-
+    
 
 }
