@@ -33,6 +33,7 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+
 function buildProduktCard(json) {
     document.getElementById("output").innerHTML += `
     <div class="col-md-3 mb-5">
