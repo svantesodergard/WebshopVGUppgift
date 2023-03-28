@@ -83,20 +83,48 @@ function orderConfirmation(id) {
 document.getElementById("submit").addEventListener("click", save);
 
 function validate(){
+
     if (document.getElementById("name").value.length<2 ||
     document.getElementById("name").value.length>50) {
-        console.log("fel");
+        console.log("namn fel");
         document.getElementById("name").value="fel";
-        return false
-} 
+        return false;
+    } 
 
-let pattern = /^([+]46)\s*(7[0236])\s*(\d{4})\s*(\d{3})$/;
+    const mailPattern = /@/;
 
-if (!pattern.test(document.getElementById("phone").value)){
-        console.log("fel");
+    if (!mailPattern.test(document.getElementById("e-mail").value)||
+    document.getElementById("e-mail").value.length>50) {
+        console.log("mail fel");
+        return false;
+    }
+
+    const pattern = /^([+]46)\s*(7[0236])\s*(\d{4})\s*(\d{3})$/;
+
+    if (!pattern.test(document.getElementById("phone").value)){
+        console.log("nummer fel");
         document.getElementById("phone").value="fel";
         return false
-}
+    }
+
+    if(document.getElementById("address").value.length<4||
+    document.getElementById("address").value.length>50) {
+        console.log("adress fel");
+        return false; 
+    }
+
+    const zipPattern = /^\d{3}\s\d{2}$/;
+
+    if(!zipPattern.test(document.getElementById("zip-code").value)) {
+        console.log("zip fel")
+        return false;
+    }
+
+    if(document.getElementById("city").value.length<4||
+    document.getElementById("city").value.length>50) {
+        console.log("city fel");
+        return false; 
+    }
 
 console.log("rätt");
 
@@ -105,7 +133,7 @@ return true
 }
 
 function save() {
-    validate();
+    if(validate()){
     
     localStorage.setItem("name", document.getElementById("name").value);
     localStorage.setItem("e-mail", document.getElementById("e-mail").value);
@@ -113,6 +141,7 @@ function save() {
     localStorage.setItem("address", document.getElementById("address").value);
     localStorage.setItem("zip-code", document.getElementById("zip-code").value);
     localStorage.setItem("city", document.getElementById("city").value);
+    }
 
     
 }
