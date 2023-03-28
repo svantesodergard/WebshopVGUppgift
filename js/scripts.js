@@ -1,4 +1,4 @@
-loadJSON()
+
 
 function loadJSON() {
     const xhr = new XMLHttpRequest();
@@ -7,10 +7,10 @@ function loadJSON() {
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.response); // OBS! En sträng
+            
 
             const json = JSON.parse(xhr.response);
-            console.log(json); // JSON-objekt
+            
 
             json.forEach(element => {
                 buildProduktCard(element)
@@ -74,7 +74,44 @@ function buildProduktCard(json) {
 // Jump to confirmation page
 function orderConfirmation(id) {
 
-    window.open('confirmation-page.html', '_blank')
+    window.open('order.html', '_blank')
 
 
+}
+
+document.getElementById("submit").addEventListener("click", save);
+
+function validate(){
+    if (document.getElementById("name").value.length<2 ||
+    document.getElementById("name").value.length>50) {
+        console.log("fel");
+        document.getElementById("name").value="fel";
+        return false
+} 
+
+let pattern = /^([+]46)\s*(7[0236])\s*(\d{4})\s*(\d{3})$/;
+
+if (!pattern.test(document.getElementById("phone").value)){
+        console.log("fel");
+        document.getElementById("phone").value="fel";
+        return false
+}
+
+console.log("rätt");
+
+return true
+    
+}
+
+function save() {
+    validate();
+    
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("e-mail", document.getElementById("e-mail").value);
+    localStorage.setItem("phone", document.getElementById("phone").value);
+    localStorage.setItem("address", document.getElementById("address").value);
+    localStorage.setItem("zip-code", document.getElementById("zip-code").value);
+    localStorage.setItem("city", document.getElementById("city").value);
+
+    
 }
