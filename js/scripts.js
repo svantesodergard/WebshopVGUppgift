@@ -62,7 +62,7 @@ function buildProduktCard(json) {
              <!-- Product price-->
              <div class="text-center">$${json.price}</div> 
              
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="orderConfirmation(${json.id})">Buy Product</a></div>
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="orderPage(${json.id})">Buy Product</a></div>
         </div>
     </div>
 </div>
@@ -73,9 +73,40 @@ function buildProduktCard(json) {
 
 
 // Jump to confirmation page
-function orderConfirmation(id) {
+function orderPage(id) {
 
-    window.open('order.html', '_blank')
+    let orderedProductAsJSON = '';
+    const xhr = new XMLHttpRequest();
+
+
+        xhr.open("GET", "https://fakestoreapi.com/products%22");
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                //console.log(xhr.response); // OBS! En sträng
+
+                const json = JSON.parse(xhr.response);
+                console.log(json); // JSON-objekt
+
+                json.forEach(element => {
+                    if (element.id == id) {
+
+                        localStorage.clear()
+
+                        console.log(element);
+                        orderedProductAsJSON = element
+
+
+                        localStorage.setItem("imgData", orderedProductAsJSON.image)
+                        localStorage.setItem("nameData", orderedProductAsJSON.title)
+                    }
+
+                });
+            }
+        }
+
+        setTimeout( ()=> {
+            window.open('order.html', '_blank')},500)
 
 
 }
@@ -141,7 +172,12 @@ function save() {
     localStorage.setItem("address", document.getElementById("address").value);
     localStorage.setItem("zip-code", document.getElementById("zip-code").value);
     localStorage.setItem("city", document.getElementById("city").value);
+console.log("here")
+    setTimeout( ()=> { window.open('confirmation-page.html', '_blank') },500)
+
     }
 
     
 }
+
+

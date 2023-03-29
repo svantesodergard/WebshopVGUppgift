@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Confirmation Page</title>
+    <style>
+        .rectangle {
+            display: flex;
+            align-items: center;
+            background-color: #eee;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rectangle img {
+            max-width: 50%;
+            margin-left: auto;
+        }
+
+        .rectangle p {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 50%;
+            margin-right: auto;
+            margin-left: 0;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangle">
+        <img id="image" src="" alt="Placeholder Image">
+        <p id="text"></p>
+    </div>
+
+
+    <script src="js/scripts.js">
+
+
+
+
+
+    </script>
+    <script>
+             const image = document.getElementById("image");
+            const text = document.getElementById("text");
+
+            text.textContent = localStorage.getItem("nameData");
+            console.log(localStorage.getItem("nameData"));
+            image.src = localStorage.getItem("imgData");
+            console.log(localStorage.getItem("imgData"));
+    </script>
+</body>
