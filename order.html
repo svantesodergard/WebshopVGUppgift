@@ -1,33 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/styles.css">
     <title>Order-page</title>
-</head>
-<body>
-    <form>
 
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="e-mail">E-mail:</label><br>
-        <input type="text" id="e-mail" name="e-mail" ><br>
-        <label for="phone">Phone number:</label><br>
-        <input type="text" id="phone" name="phone" ><br>
-        <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address" ><br>
-        <label for="zip-code">Zip code:</label><br>
-        <input type="text" id="zip-code" name="zip-code" ><br>
-        <label for="city">City:</label><br>
-        <input type="text" id="city" name="city" ><br>
+
+
+
+
+  </head>
+  <body id="order-body">
+    
+    <div id="order-css" class='container'>
+        <div class='window'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <h2>Order Summary</h2>
+                      <div class='line'></div>
+              
+              
+                      <table class='order-table'>
+                <tbody>
+                  <tr>
+                    <td><img id="order-img" class='full-width'></img>
+                    </td>
+                    <td>
+                      <br> <span id="product-name" class='thin'></span>
+                      <br> <div id="product-info"></div>
+                      
+                      <br> 
+                    </td>
+      
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="product-price" class='price'></div>
+                    </td>
+                  </tr>
+                </tbody>
+      
+              </table>
+              <div class='line'></div>
+    
+    
+              
+              
+              <div class='line'></div>
+              <div class='total'>
+                <span style='float:left;'>
+                  <div class='thin dense'>Delivery</div>
+                  TOTAL
+                </span>
+                <span style='float:right; text-align:right;'>
+                  <div class='thin dense'>$4.95</div>
+    
+                  <div id="total-price"></div>
+    
+                </span>
+              </div>
+      </div>
+      </div>
+              <div class='credit-info'>
+                <div class='credit-info-content'>
+                    Name
+                    <input id="name" class='input-field'></input>
+                    Email
+                    <input id="e-mail"class='input-field'></input>
+                    Phonenumber
+                    <input id="phone"class='input-field'></input>
+                    Shipping info
+                    <input id="address"class='input-field'></input>
+                    
+      
+      
+      
+      
+                    <table class='half-input-table'>
+    
+    
+                      <tr>
+                        <td> Zip-code
+                          <input id="zip-code" class='input-field'></input>
+                        </td>
+                        <td>City
+                          <input id="city" class='input-field'></input>
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="submit" class='pay-btn'>Checkout</button>
         
+                  </div>
         
-      </form>
-      <button id="submit">Submit</button> 
+                </div>
+              </div>
+        </div>
+                 
+    
+    
     
 
-<script src="js/scripts.js"></script>
-</body>
+
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
+
+
+
+
+
+

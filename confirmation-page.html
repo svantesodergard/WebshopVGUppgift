@@ -1,41 +1,39 @@
-
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Confirmation Page</title>
     <style>
-        .rectangle {
-            display: flex;
-            align-items: center;
-            background-color: #eee;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+      .rectangle {
+        display: flex;
+        align-items: center;
+        background-color: #eee;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
 
-        .rectangle img {
-            max-width: 50%;
-            margin-left: auto;
-        }
+      .rectangle img {
+        max-width: 50%;
+        margin-left: auto;
+      }
 
-        .rectangle p {
-            font-size: 18px;
-            line-height: 1.5;
-            max-width: 50%;
-            margin-right: auto;
-            margin-left: 0;
-            padding-right: 20px;
-        }
+      .rectangle p {
+        font-size: 18px;
+        line-height: 1.5;
+        max-width: 50%;
+        margin-right: auto;
+        margin-left: 0;
+        padding-right: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="rectangle">
-        <img id="image" src="" alt="Placeholder Image">
-        <p id="text"></p>
+      <img id="image" src="" alt="Placeholder Image" />
+      <p id="text"></p>
     </div>
 
     <div id="name"></div>
@@ -43,30 +41,28 @@
     <div id="phonenumber"></div>
     <div id="shipping-adress"></div>
 
-    <script src="js/scripts.js"> </script>
+    <script src="js/scripts.js"></script>
     <script>
-             const image = document.getElementById("image");
-            const text = document.getElementById("text");
+      const image = document.getElementById("image");
+      const text = document.getElementById("text");
 
-            const name = document.getElementById("name")
-            const email = document.getElementById("email")
-            const phone = document.getElementById("phonenumber")
-            const shippingadress = document.getElementById("shipping-adress")
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phonenumber");
+      const shippingadress = document.getElementById("shipping-adress");
 
+      text.textContent = localStorage.getItem("nameData");
+      image.src = localStorage.getItem("imgData");
 
-            text.textContent = localStorage.getItem("nameData");
-            image.src = localStorage.getItem("imgData");
-
-            name.textContent = localStorage.getItem("name");
-            email.textContent = localStorage.getItem("e-mail");
-            phone.textContent = localStorage.getItem("phone");
-            shippingadress.textContent = localStorage.getItem("address") + ", " + localStorage.getItem("zip-code") + ", " + localStorage.getItem("city")
-
-
-
-
-
-
-
+      name.textContent = localStorage.getItem("name");
+      email.textContent = localStorage.getItem("e-mail");
+      phone.textContent = localStorage.getItem("phone");
+      shippingadress.textContent =
+        localStorage.getItem("address") +
+        ", " +
+        localStorage.getItem("zip-code") +
+        ", " +
+        localStorage.getItem("city");
     </script>
-</body>
+  </body>
+</html>
