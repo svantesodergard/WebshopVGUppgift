@@ -11285,4 +11285,29 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+
+  
+
 }
+.overflow {
+
+  height: 150px;
+  overflow: scroll;
+}
+.our-images{
+  height: 200px;
+  width: 200px;
+
+  object-fit: cover;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: #055160;
+}
+
+.align-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
