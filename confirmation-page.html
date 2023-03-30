@@ -1,214 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-    <title>Confirmation Page</title>
-    <style>
-      .rectangle {
-        display: flex;
-        align-items: center;
-        background-color: #eee;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      .rectangle img {
-        max-width: 50%;
-        margin-left: auto;
-      }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-      .rectangle p {
-        font-size: 18px;
-        line-height: 1.5;
-        max-width: 50%;
-        margin-right: auto;
-        margin-left: 0;
-        padding-right: 20px;
-      }
+    <title>Hello, world!</title>
+</head>
 
-</style>
-  </head>
-
-
-<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Open Sans, Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-For what reason would it be advisable for me to think about business content? That might be little bit risky to have crew member like them. 
-</div>
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td align="center" style="background-color: #eeeeee;" >
-        
-        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
-            <tr>
-                <td align="center" valign="top" style="font-size:0; padding: 35px; background-color: #4488dd;" >
-               
-                <div style="display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;">
-                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
-                        <tr>
-                            <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 800; line-height: 48px;" class="mobile-center">
-                                <h1 style="font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;"></h1>
-                            </td>
-                        </tr>
-                    </table>
+<body class="bg-light">
+    <div style="max-width: 600px;" class="mx-auto bg-white">
+        <div style="height: 60px;" class="jumbotron w-100 bg-primary"></div>
+            <div class="p-3">
+                <h1 class="text-center">Thank You for Your Order!</h1>
+                <div class="container">
+                    <h5 class="fw-bold">Order Confirmation</h5>
+                    <div class="row">
+                        <div id="product-name" class="col-9">Product Name</div>
+                        <div id="price" class="col-3">Price</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">Shipping + Handling</div>
+                        <div class="col-3">$4.95</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="fw-bold col-9">TOTAL</div>
+                        <div id="total-price" class="fw-bold col-3">Price</div>
+                    </div>
+                    <hr>
+                    <div class="border rounded row bg-light">
+                        <img id="image" class="p-3 w-50 mx-auto" id="image" alt="Product" src="_">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fw-bold">Delivery Address</div>
+                            <div id="address"></div>
+                            <div id="zip-code"></div>
+                            <div id="city"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fw-bold">Costumer Details</div>
+                            <div id="name"></div>
+                            <div id="e-mail"></div>
+                            <div id="phone"></div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div style="display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;" class="mobile-hide">
-                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
-                        <tr>
-                            <td align="right" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;">
-                                <table cellspacing="0" cellpadding="0" border="0" align="right">
-                                    <tr>
-                                       
-                                        <td style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 24px;">
-                                          
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+            </div>
+            <div style="height: 200px;" class="d-flex align-items-center jumbotron w-100 bg-primary text-center">
+                <div class="w-100">
+                    <h1 class="text-white">Thank you for your order!</h1>
+                    <a href="index.html" class="text-white p-3 mx-auto btn bg-success">Order Again</a>
                 </div>
-              
-                </td>
-            </tr>
-            <tr>
-                <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ffffff;" >
-                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
-                    <tr>
-                        <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
-                            <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
-                                Thank You For Your Order!
-                            </h2>
-                        </td>
-                    </tr>
-                  
-                    <tr>
-                        <td align="left" style="padding-top: 20px;">
-                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;">
-                                        Order Confirmation
-                                    </td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
-                                        <div id="product-name"></div>
-                                    </td>
-                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
-                                        <div id="price"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
-                                        Shipping + Handling
-                                    </td>
-                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
-                                        $4.95
-                                    </td>
-                                </tr>
-                                <tr>
-                                    
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding-top: 20px;">
-                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
-                                        TOTAL
-                                    </td>
-                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
-                                        <div id="total-price"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                
-                <div class="rectangle">
-                    <img id="image" alt="Placeholder Image" />
-                    <p id="product-name"></p>
-                  </div>
-
-                </td>
-            </tr>
-             <tr>
-                <td align="center" height="100%" valign="top" width="100%" style="padding: 0 35px 35px 35px; background-color: #ffffff;" >
-                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px;">
-                    <tr>
-                        <td align="center" valign="top" style="font-size:0;">
-                            <div style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
-
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
-                                    <tr>
-                                        <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
-                                            <p style="font-weight: 800;">Delivery Address</p>
-                                            <div id="address"></div>
-                                            <div id="zip-code"></div>
-                                            <div id="city"></div>
-                                            
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
-                                    <tr>
-                                        <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
-                                            <p style="font-weight: 800;">Customer details</p>
-                                            <div id="name"></div>
-                                            <div id="e-mail"></div>
-                                            <div id="phone"></div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                </td>
-            </tr>
-            <tr>
-                <td align="center" style=" padding: 35px; background-color: #4488dd;" >
-                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
-                    <tr>
-                        <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
-                            <h2 style="font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;">
-                                Thank you for your order!
-                            </h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" style="padding: 25px 0 15px 0;">
-                            <table border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                    <td align="center" style="border-radius: 5px;" >
-                                      <a href="index.html" target="_blank" style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;">Shop Again</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                </td>
-            </tr>
-            
-        </table>
-        </td>
-    </tr>
-</table>
-    
-
-
-
-
-
+            </div>
+        </div>
+    </div>
 
 <script src="js/scripts.js"></script>
     <script>
@@ -240,7 +92,8 @@ For what reason would it be advisable for me to think about business content? Th
       email.textContent = localStorage.getItem("e-mail");
       phone.textContent = localStorage.getItem("phone");
       
+      localStorage.clear();
     </script>
-
 </body>
+
 </html>
