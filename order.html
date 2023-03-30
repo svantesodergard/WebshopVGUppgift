@@ -7,28 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css">
   <title>Order-page</title>
-
-
-
-
-
 </head>
 
 <body id="order-body">
-
   <div id="order-css" class='container'>
     <div class='window'>
       <div class='order-info'>
         <div class='order-info-content'>
           <h2>Order Summary</h2>
-          <div class='line'></div>
 
+          <div class='line'></div>
 
           <table class='order-table'>
             <tbody>
               <tr>
                 <td>
-                  <img id="product-img" class='full-width'></img>
+                  <img id="product-img" src="_" alt="Product Image" class='full-width'>
                 </td>
                 <td>
                   <br> 
@@ -44,53 +38,50 @@
                 <td>
                   <div id="product-price" class='price'></div>
                 </td>
+                <td></td>
               </tr>
             </tbody>
 
           </table>
           <div class='line'></div>
 
-
-
-
           <div class='total'>
-            <span style='float:left;'>
+            <div style='float:left;'>
               <div class='thin dense'>Delivery</div>
               TOTAL
-            </span>
-            <span style='float:right; text-align:right;'>
+            </div>
+            <div style='float:right; text-align:right;'>
               <div class='thin dense'>$4.95</div>
 
               <div id="total-price"></div>
 
-            </span>
+            </div>
           </div>
         </div>
       </div>
       <div class='credit-info'>
         <div class='credit-info-content'>
           Name
-          <input id="name" class='input-field'></input>
+          <input id="name" class='input-field'>
           <div id="error-name" class="display-none color-red">Namn måste innehålla 2-50 tecken</div>
           Email
-          <input id="e-mail" class='input-field'></input>
+          <input id="e-mail" class='input-field'>
           <div id="error-e-mail" class="display-none color-red">Ogiltig e-postadress</div>
           Phonenumber
-          <input id="phone" class='input-field'></input>
+          <input id="phone" class='input-field'>
           <div id="error-phone" class="display-none color-red">Telefonnummer måste följa formatet +46701234567</div>
           Shipping info
-          <input id="address" class='input-field'></input>
+          <input id="address" class='input-field'>
           <div id="error-address" class="display-none color-red">Ogiltig address</div>
 
           <table class='half-input-table'>
 
-
             <tr>
               <td> Zip-code
-                <input id="zip-code" class='input-field'></input>
+                <input id="zip-code" class='input-field'>
               </td>
               <td>City
-                <input id="city" class='input-field'></input>
+                <input id="city" class='input-field'>
               </td>
             </tr>
             <tr>
@@ -110,11 +101,6 @@
     </div>
   </div>
 
-
-
-
-
-
   <script src="js/scripts.js"></script>
   <script>
     const image = document.getElementById("product-img");
@@ -128,8 +114,6 @@
     image.src = localStorage.getItem("imgData");
     price.textContent = "$" + localStorage.getItem("priceData");
     totalPrice.textContent = "$" + (parseFloat(localStorage.getItem("priceData")) + shippingCost);
-
-
   </script>
 </body>
 
