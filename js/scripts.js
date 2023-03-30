@@ -75,11 +75,10 @@ function buildProduktCard(json) {
 // Jump to confirmation page
 function orderPage(id) {
 
-    let orderedProductAsJSON = '';
     const xhr = new XMLHttpRequest();
 
 
-        xhr.open("GET", "https://fakestoreapi.com/products%22");
+        xhr.open("GET", "https://fakestoreapi.com/products");
         xhr.send();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -94,11 +93,15 @@ function orderPage(id) {
                         localStorage.clear()
 
                         console.log(element);
-                        orderedProductAsJSON = element
+            
 
 
-                        localStorage.setItem("imgData", orderedProductAsJSON.image)
-                        localStorage.setItem("nameData", orderedProductAsJSON.title)
+                        localStorage.setItem("imgData", element.image)
+                        localStorage.setItem("nameData", element.title)
+                        localStorage.setItem("priceData", element.price)
+                        localStorage.setItem("descriptionData", element.description)
+
+
                     }
 
                 });
@@ -106,7 +109,7 @@ function orderPage(id) {
         }
 
         setTimeout( ()=> {
-            window.open('order.html', '_blank')},500)
+            window.open('order.html', '_blank')}, 500)
 
 
 }
