@@ -11754,8 +11754,13 @@ fieldset:disabled .btn {
   width: 100%;
 }
 #order-css .half-input-table td:first-of-type {
-  border-right: 10px solid #4488dd;
-  width: 50%;
+  border-right: 10px solid #4488dd; }
+
+#order-css .color-red {
+  color: red;
+}
+#order-css .display-none {
+  display: none;
 }
 #order-css .window {
   margin: auto;
