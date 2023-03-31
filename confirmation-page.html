@@ -14,29 +14,26 @@
 </head>
 
 <body class="bg-light">
-    <div style="max-width: 600px;" class="mx-auto bg-white">
+    <div style="max-width: 700px;" class="mx-auto bg-white">
         <div style="height: 60px;" class="jumbotron w-100 bg-primary"></div>
             <div class="p-3">
                 <h1 class="text-center">Thank You for Your Order!</h1>
                 <div class="container">
                     <h5 class="fw-bold">Order Confirmation</h5>
-                    <div class="row">
-                        <div id="product-name" class="col-9">Product Name</div>
-                        <div id="price" class="col-3">Price</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-9">Shipping + Handling</div>
-                        <div class="col-3">$4.95</div>
-                    </div>
+        <div class="row fw-bold">
+          <div style="width: 80px;" class="col-2"></div>
+          <div class="d-flex align-items-center col-8">Item</div>
+          <div class="d-flex align-items-center col-1">#</div>
+          <div class="text-right d-flex align-items-center col-1">Price</div>
+        </div>
+        <div id="cart-items"></div>
+        <div class="row fw-bold">
+          <div style="width: 80px;" class="col-2">Total</div>
+          <div class="d-flex align-items-center col-8"></div>
+          <div id="cart-count" class="d-flex align-items-center col-1">0</div>
+          <div id="cart-total" class="d-flex align-items-center col-1">$0</div>
+        </div>
                     <hr>
-                    <div class="row">
-                        <div class="fw-bold col-9">TOTAL</div>
-                        <div id="total-price" class="fw-bold col-3">Price</div>
-                    </div>
-                    <hr>
-                    <div class="border rounded row bg-light">
-                        <img id="image" class="p-3 w-50 mx-auto" alt="Product" src="_">
-                    </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="fw-bold">Delivery Address</div>
@@ -62,26 +59,14 @@
         </div>
 
 <script src="js/scripts.js"></script>
+  <script src="js/cart.js"></script>
     <script>
-      const image = document.getElementById("image");
-      const productName = document.getElementById("product-name");
-      const price = document.getElementById("price");
-      const shippingCost = 4.95;
-      const totalPrice = document.getElementById("total-price");
-
-      
       const name = document.getElementById("name");
       const email = document.getElementById("e-mail");
       const phone = document.getElementById("phone");
       const address = document.getElementById("address");
       const zipCode = document.getElementById("zip-code");
       const city = document.getElementById("city");
-
-
-      totalPrice.textContent = "$" + (parseInt(localStorage.getItem("priceData")) + shippingCost);
-      price.textContent = "$" + localStorage.getItem("priceData")
-      productName.textContent = localStorage.getItem("nameData");
-      image.src = localStorage.getItem("imgData");
 
       address.textContent = localStorage.getItem("address");
       zipCode.textContent = localStorage.getItem("zip-code");

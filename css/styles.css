@@ -11764,8 +11764,9 @@ fieldset:disabled .btn {
 }
 #order-css .window {
   margin: auto;
+  margin-top: 30px;
   height: 540px;
-  width: 800px;
+  width: 1300px;
   background: #fff;
   display: -webkit-box;
   display: -webkit-flex;
