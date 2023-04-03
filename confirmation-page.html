@@ -22,16 +22,16 @@
                     <h5 class="fw-bold">Order Confirmation</h5>
         <div class="row fw-bold">
           <div style="width: 80px;" class="col-2"></div>
-          <div class="d-flex align-items-center col-8">Item</div>
-          <div class="d-flex align-items-center col-1">#</div>
-          <div class="text-right d-flex align-items-center col-1">Price</div>
+          <div class="d-flex align-items-center col-6">Item</div>
+          <div class="d-flex align-items-center col-2">#</div>
+          <div class="text-right d-flex align-items-center col-2">Price</div>
         </div>
         <div id="cart-items"></div>
         <div class="row fw-bold">
           <div style="width: 80px;" class="col-2">Total</div>
-          <div class="d-flex align-items-center col-8"></div>
-          <div id="cart-count" class="d-flex align-items-center col-1">0</div>
-          <div id="cart-total" class="d-flex align-items-center col-1">$0</div>
+          <div class="d-flex align-items-center col-6"></div>
+          <div id="cart-count" class="d-flex align-items-center col-2">0</div>
+          <div id="cart-total" class="d-flex align-items-center col-2">$0</div>
         </div>
                     <hr>
                     <div class="row">
@@ -61,6 +61,7 @@
 <script src="js/scripts.js"></script>
   <script src="js/cart.js"></script>
     <script>
+      getCartHTML();  
       const name = document.getElementById("name");
       const email = document.getElementById("e-mail");
       const phone = document.getElementById("phone");

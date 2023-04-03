@@ -11,9 +11,9 @@
 
 <body id="order-body">
   <div id="order-css" class='container'>
-    <div class='window'>
+    <div class='window w-100'>
       <div class='order-info'>
-        <div class='order-info-content'>
+        <div class='order-info-content w-100'>
           <h2>Order Summary</h2>
 
           <div class='line'></div>
@@ -21,7 +21,7 @@
           <div id="cart-items"></div>
         <div class="row fw-bold">
           <div style="width: 80px;" class="col-2">Total</div>
-          <div class="d-flex align-items-center col-8"></div>
+          <div class="d-flex align-items-center col-6"></div>
           <div id="cart-count" class="d-flex align-items-center col-1">0</div>
         </div>
 
@@ -79,6 +79,7 @@
 
   <script src="js/cart.js"></script>
   <script src="js/scripts.js"></script>
+  <script>getCartHTML()</script>
 </body>
 
 </html>

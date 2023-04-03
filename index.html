@@ -53,19 +53,19 @@
       <h3>Your Cart</h3>
         <div class="row fw-bold">
           <div style="width: 80px;" class="col-2"></div>
-          <div class="d-flex align-items-center col-8">Item</div>
-          <div class="d-flex align-items-center col-1">#</div>
-          <div class="text-right d-flex align-items-center col-1">Price</div>
+          <div class="d-flex align-items-center col-6">Item</div>
+          <div class="text-center col-2">Count</div>
+          <div class="text-right d-flex align-items-center col-2">Price</div>
         </div>
         <div id="cart-items"></div>
         <div class="row fw-bold">
           <div style="width: 80px;" class="col-2">Total</div>
-          <div class="d-flex align-items-center col-8"></div>
-          <div id="cart-count" class="d-flex align-items-center col-1">0</div>
-          <div id="cart-total" class="d-flex align-items-center col-1">$0</div>
+          <div class="d-flex align-items-center col-6"></div>
+          <div id="cart-count" class="text-center col-2">0</div>
+          <div id="cart-total" class="d-flex align-items-center col-2">$0</div>
         </div>
         <div class="row p-3">
-          <div class="col-9"></div>
+          <div class="col-9"><a id="clear-cart" href="#">Clear cart</a></div>
           <a href="order.html" class="col-3 btn btn-success rounded float-right">Checkout</a>
         </div>
     </div>
@@ -108,6 +108,7 @@
     <script src="js/cart.js"></script>
     <script>
       loadJSON();
+      getCartHTML(true);
     </script>
   </body>
 </html>
